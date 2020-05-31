@@ -1,1 +1,1 @@
-# This is a repo for Static Website for GR Realtors Kochi
+# This is a repo for Static Website of GR Realtors Kochi
