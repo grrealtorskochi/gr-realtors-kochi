@@ -18,7 +18,8 @@
     <link rel="apple-touch-icon" sizes="152x152" href="https://products.grrealtorskochi.in/modified.png">
     <link rel="apple-touch-icon" sizes="180x180" href="https://products.grrealtorskochi.in/modified.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body style="overflow-x: hidden;">
   <header class="fixed sticky-top" >
@@ -68,17 +69,49 @@
         </div>
     </div>
 </header>
- <h1 class="text-center font-weight-bold pt-4" style="color: #563d7c;">INQUIRY</h1><hr style="width: 50px;">
- <div class="oc">
- <div style="margin-left: 10px;margin-right: 10px;margin-top: 30px;" class="sc"> 
-  <script>
-    hbspt.forms.create({
-    portalId: "7671903",
-    formId: "7af8c385-e8d4-4df4-8df9-a10c18c0e937"
-  });
-  </script>
- </div>
-</div>
+
+    <div class="container">
+        <h1 class="text-center" style="font-weight: bold;color: #563d7c;">INQUIRY</h1>
+        <form id="submit-form" action="">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+          </div>
+          <div>
+            <div class="form-group" style="width: 10%;">
+              <label for="country">Country Code:</label>
+              <input type="number" class="form-control" id="country" placeholder="+91" name="country">
+            </div>
+            <div class="form-group" style="width: 50%;">
+              <label for="phone">Phone:</label>
+              <input type="number" class="form-control" id="phone" placeholder="Enter Phone number" name="phone" required>
+            </div>
+         </div>
+
+         <div class="form-group">
+           <label for="interest"></label>
+           <input type="text" id="interest" class="form-control" placeholder="I'm interested in ..." name="Interested in">
+         </div>
+
+         <div class="form-group" >
+          <label for="message"></label>
+          <input type="text" id="message" class="form-control"  placeholder="Message" name="message">
+        </div>
+   
+         <br>
+
+          <div class="text-center">
+             <button type="submit" class="btn btn-success"> <b>Submit</b> </button>
+          </div>
+
+          <br><br><br><br>
+        </form>
+      </div>
+
    <footer class=" pt-5 d-flex flex-column img-fluid" style="color: white;background-color: black;">
     <div class=" img-fluid">
         <div class="text-center">
@@ -92,6 +125,26 @@
     </div>
     </footer>
   </div>
+ 
+  <script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbyf2BBK2wzu46YX8_JW4eS9Day8OtFLCqIn3teX/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                // alert("Form submitted successfully")
+                // window.location.reload()
+                window.location.href="thanks.htm"
+            },
+            error:function (err){
+                alert("Something Error")
 
+            }
+        })
+    })
+</script>
 </body>
 </html>
+
