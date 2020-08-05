@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INQUIRY</title>
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
      <link rel="stylesheet" href="bootstrap.min.css">
      <link rel="stylesheet" href="style.css">
      <link rel="shortcut icon" href="https://products.grrealtorskochi.in/modified-r.png" >
@@ -19,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="https://products.grrealtorskochi.in/modified.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+
 </head>
 <body style="overflow-x: hidden;">
   <header class="fixed sticky-top" >
@@ -82,14 +81,16 @@
             <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
           </div>
           <div>
-            <div class="form-group" style="width: 10%;">
+            <div class="row">
+            <div class="form-group col-md-2">
               <label for="country">Country Code:</label>
               <input type="number" class="form-control" id="country" placeholder="+91" name="country">
             </div>
-            <div class="form-group" style="width: 50%;">
+            <div class="form-group col-md-6">
               <label for="phone">Phone:</label>
               <input type="number" class="form-control" id="phone" placeholder="Enter Phone number" name="phone" required>
             </div>
+          </div>
          </div>
 
          <div class="form-group">
@@ -101,7 +102,7 @@
           <label for="message"></label>
           <input type="text" id="message" class="form-control"  placeholder="Message" name="message">
         </div>
-   
+      
          <br>
 
           <div class="text-center">
