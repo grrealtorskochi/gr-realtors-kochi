@@ -20,6 +20,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
+    
+    <style>
+          input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+          }
+    </style>
+    
 <body style="overflow-x: hidden;">
   <header class="fixed sticky-top" >
     <div class="row text-white img-fluid padd">
@@ -100,7 +112,7 @@
 
          <div class="form-group" >
           <label for="message"></label>
-          <input type="text" id="message" class="form-control"  placeholder="Message" name="message">
+           <textarea id="message" name="message" placeholder="Message" style="height:170px"></textarea>
         </div>
       
          <br>
